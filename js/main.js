@@ -178,8 +178,8 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.tabIndex = "3";
   li.append(more)
-
   return li
 }
 
@@ -208,4 +208,17 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+
+//Register Service Worker
+if('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    this.navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      //successful registration
+      console.log('ServiceWorker reg is successful', registration.scope);
+    }, function(err) {
+      //failed registration
+      console.log('ServiceWorker reg failed', err);
+    });
+  });
+}
 
