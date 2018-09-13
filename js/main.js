@@ -159,6 +159,7 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
+  image.setAttribute('alt', 'restaurant image');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
@@ -210,15 +211,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 } */
 
 //Register Service Worker
-if('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    this.navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      //successful registration
-      console.log('ServiceWorker reg is successful', registration.scope);
-    }, function(err) {
-      //failed registration
-      console.log('ServiceWorker reg failed', err);
-    });
-  });
-}
+// if('serviceWorker' in navigator) {
+//   window.addEventListener('load', function() {
+//     this.navigator.serviceWorker.register('/sw.js').then(function(registration) {
+//       //successful registration
+//       console.log('ServiceWorker reg is successful', registration.scope);
+//     }, function(err) {
+//       //failed registration
+//       console.log('ServiceWorker reg failed', err);
+//     });
+//   });
+// }
 

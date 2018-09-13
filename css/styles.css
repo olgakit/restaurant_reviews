@@ -198,8 +198,8 @@ nav h1 a {
   background: blue none repeat scroll 0 0;
   height: 100%;
   position: fixed;
-  right: 0;
   top: 80px;
+  right: 0;
   width: 50%;
 }
 .inside #map {
@@ -258,7 +258,7 @@ nav h1 a {
 }
 #reviews-container {
   width: 50%;
-  padding: auto;
+  padding: 0 0 60px;
 }
 #reviews-container h2 {
   align-items: center;
@@ -271,19 +271,19 @@ nav h1 a {
 }
 #reviews-list {
   align-items: center;
-  margin: 0;
-  padding: 5%;
+  margin: auto 1%;
+  padding: 0 0 5%;
 }
 #reviews-list li {
   align-content: center;
   background-color: #fff;
   border: 2px solid #f3f3f3;
   list-style-type: none;
-  margin: 0 0 50px;
+  margin: 0 0 10px;
   overflow: hidden;
-  padding: 20px;
+  padding: 1em;
   position: relative;
-  width: 65%;
+  width: 100% - padding;
 }
 #reviews-list li p {
   margin: 0 0 10px;
