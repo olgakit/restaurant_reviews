@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
@@ -18,14 +19,16 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map"></div>
+      <div role="application" aria-label="map" id="map"></div>
     </section>
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
+        <label for="neighborhoods">Choose restaurants' neighbourhood</label>
         <select tabindex="2" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
+        <label for="cuisine">Choose restaurants' cuisine</label>
         <select tabindex="2" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
